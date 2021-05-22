@@ -11,6 +11,9 @@
 }
 
 @media screen and (min-width: 700px) {
+  .navbar {
+    max-width: 1250px;
+  }
   .navbar .logo-navbar {
     margin-right: 2.5rem;
   }
@@ -89,6 +92,7 @@
     border-radius: 2rem !important;
   }
   header {
+    max-width: 1500px;
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
