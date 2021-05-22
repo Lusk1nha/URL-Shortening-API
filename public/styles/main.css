@@ -1,0 +1,260 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-cyan: hsl(180, 66%, 49%);
+  --primary-violet: hsl(257, 27%, 26%);
+  --neutral-gray: hsl(0, 0%, 75%);
+  --neutral-grayish-violet: hsl(257, 7%, 63%);
+  --neutral-dark-blue: hsl(255, 11%, 22%);
+  --neutral-dark-violet: hsl(260, 8%, 14%);
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+  min-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 0.8rem;
+}
+
+body .button {
+  background-color: var(--primary-cyan);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  border: none;
+  cursor: pointer;
+  opacity: 90%;
+  -webkit-transition: -webkit-filter 0.2s ease-in-out;
+  transition: -webkit-filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
+}
+
+body .button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.navbar {
+  width: 85%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo-navbar {
+  width: 5.5rem;
+  image-rendering: crisp-edges;
+}
+
+.navbar .mobile-navbar {
+  background-image: url("../assets/hamburger-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-filter: contrast(0) brightness(100%);
+          filter: contrast(0) brightness(100%);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.navbar .navbar-buttons {
+  display: none;
+}
+
+.navbar.opened {
+  position: relative;
+}
+
+.navbar.opened .mobile-navbar {
+  background-image: url("../assets/close.png");
+  width: 20px;
+}
+
+.navbar.opened .navbar-buttons {
+  background-color: var(--primary-violet);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  list-style: none;
+  margin: 0 auto;
+  padding: 1.8rem 0 2.2rem;
+  border-radius: 0.5rem;
+}
+
+.navbar.opened .navbar-buttons .navbar--path {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  margin: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar.opened .navbar-buttons .navbar--path:hover {
+  color: var(--neutral-gray);
+}
+
+.navbar.opened .navbar-buttons section {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.navbar.opened .navbar-buttons section .button--navbar {
+  max-width: 300px;
+  width: 100%;
+  height: 50px;
+  border-radius: 1.5rem;
+}
+
+.navbar.opened .navbar-buttons section::before {
+  content: '';
+  background-color: rgba(128, 128, 128, 0.363);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-bottom: 6rem;
+}
+
+header .header-bg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  image-rendering: crisp-edges;
+  max-width: 500px;
+  width: 120%;
+  margin-left: 55%;
+}
+
+.header-content {
+  max-width: 520px;
+  width: 85%;
+  margin-top: 1rem;
+  padding: 1rem 0 3rem;
+  text-align: center;
+}
+
+.header-content .header-title {
+  color: var(--neutral-dark-blue);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.header-content .header-text {
+  color: var(--neutral-grayish-violet);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.header-content .button--header {
+  max-width: 250px;
+  width: 60%;
+  height: 50px;
+  font-size: 1.3rem;
+  letter-spacing: 0.04rem;
+  border-radius: 2rem;
+}
+
+main {
+  background-color: var(--neutral-gray);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
