@@ -10,10 +10,7 @@
   }
 }
 
-@media screen and (min-width: 700px) {
-  .navbar {
-    max-width: 1250px;
-  }
+@media screen and (min-width: 800px) {
   .navbar .logo-navbar {
     margin-right: 2.5rem;
   }
@@ -39,6 +36,10 @@
     position: unset !important;
     padding: 0 !important;
     list-style: none;
+    -webkit-user-select: none !important;
+       -moz-user-select: none !important;
+        -ms-user-select: none !important;
+            user-select: none !important;
   }
   .navbar .navbar-buttons .navbar--path {
     display: -webkit-box !important;
@@ -92,7 +93,6 @@
     border-radius: 2rem !important;
   }
   header {
-    max-width: 1500px;
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -128,6 +128,124 @@
   }
   .header-content .button--header {
     max-width: 200px;
+  }
+  .shorter-link-container .create-link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: -50px;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+  .shorter-link-container .create-link .input-container .input--create-link {
+    width: 95%;
+  }
+  .shorter-link-container .create-link .button--create-link {
+    width: 30%;
+  }
+  .shorter-link-container .create-link::before {
+    background-image: url("../assets/bg-shorten-desktop.svg");
+    max-width: unset;
+    width: 100%;
+  }
+  .shorter-link-container .newlink-container .link-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 1.4rem;
+  }
+  .shorter-link-container .newlink-container .link-container .user-link {
+    width: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  .shorter-link-container .newlink-container .link-container .user-link::before {
+    all: unset;
+  }
+  .shorter-link-container .newlink-container .link-container .short-link {
+    width: auto;
+  }
+  .shorter-link-container .newlink-container .link-container .button--copy {
+    max-width: 100px;
+    height: 30px;
+    margin-left: 1.2rem;
+  }
+  .info-container .info-header {
+    max-width: 400px;
+  }
+  .info-container .info-header .info-title {
+    font-size: 2rem;
+  }
+  .info-container .info-header .info-text {
+    font-size: 1rem;
+  }
+  .info-container .cards-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: -180px;
+  }
+  .info-container .cards-container .card {
+    min-width: 200px;
+    min-height: 260px;
+    text-align: start;
+    margin: calc(5rem * var(--card)) 1rem 0;
+  }
+  .info-container .cards-container .card span {
+    left: 20px;
+  }
+  .info-container .cards-container .card .card-text {
+    padding-right: 2.5rem;
+  }
+  .info-container .cards-container .card::before {
+    height: 32px;
+    right: -18px;
+    bottom: unset;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 0;
+  }
+  .info-container .boost-container .boost-title {
+    font-size: 1.8rem;
+  }
+  .info-container .boost-container::before {
+    background-image: url("../assets/bg-boost-desktop.svg");
+  }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 3rem 10% 0;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .navbar,
+  header,
+  .shorter-link-container {
+    max-width: 1150px;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
