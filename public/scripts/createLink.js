@@ -21,8 +21,10 @@ const createLink = (userURL, shortedURL) => {
   userLink.className = 'user-link'
   userLink.innerHTML = userURL
 
-  const shortLink = document.createElement('h6')
+  const shortLink = document.createElement('a')
   shortLink.className = 'short-link'
+  shortLink.target = "__blank"
+  shortLink.href = 'https://' + shortedURL
   shortLink.innerHTML = shortedURL
 
   const btnCopy = document.createElement('button')
@@ -41,14 +43,14 @@ const createLink = (userURL, shortedURL) => {
 function copyLink() {
   const link = this.parentElement.childNodes[1].innerHTML
   navigator.clipboard.writeText(link)
-  
-  // for ( let button of buttonCopys ) {
-  //   button.classList.remove('copied')
-  //   button.innerHTML = 'Copy'
-  // }
 
   this.classList.add('copied')
   this.innerHTML = 'Copied'
+
+  setTimeout(() => {
+    this.classList.remove('copied')
+    this.innerHTML = 'Copy'
+  }, 2000)
 }
 
 function urlValidation(URL) {
