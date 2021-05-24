@@ -52,6 +52,12 @@ function copyLink() {
 }
 
 function urlValidation(URL) {
+  const allLinks = document.querySelectorAll('.link-container')
+  if ( allLinks.length >= 5 ) {
+    invalidURL('You have reached the limit of 5 links')
+    return false
+  }
+
   if ( URL.length === 0 ) {
     return invalidURL('Empty URL. Please add a link')
 
