@@ -447,10 +447,14 @@ main {
       .button--copy {
         width: 90%;
         height: 40px;
+
+        user-select: none;
   
         &.copied {
           background-color: var(--neutral-dark-blue);
-  
+          
+          pointer-events: none;
+
           cursor: default;
         }
       }
@@ -521,6 +525,10 @@ main {
 
       border-radius: 0.5rem;
 
+      transition: transform 0.3s;
+
+      cursor: default;
+
       span {
         background-color: var(--primary-violet);
           
@@ -559,6 +567,11 @@ main {
         color: var(--neutral-grayish-violet);
         font-size: 0.9rem;
         line-height: 1.6rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+
       }
 
       &::before {

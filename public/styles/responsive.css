@@ -208,9 +208,6 @@
   .info-container .cards-container .card span {
     left: 20px;
   }
-  .info-container .cards-container .card .card-text {
-    padding-right: 2.5rem;
-  }
   .info-container .cards-container .card::before {
     height: 32px;
     right: -18px;

@@ -480,10 +480,15 @@ main {
 .shorter-link-container .newlink-container .link-container .button--copy {
   width: 90%;
   height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .shorter-link-container .newlink-container .link-container .button--copy.copied {
   background-color: var(--neutral-dark-blue);
+  pointer-events: none;
   cursor: default;
 }
 
@@ -574,6 +579,11 @@ main {
   margin-bottom: 60px;
   padding: 4rem 2rem 2rem;
   border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  cursor: default;
 }
 
 .info-container .cards-container .card span {
@@ -613,6 +623,11 @@ main {
   color: var(--neutral-grayish-violet);
   font-size: 0.9rem;
   line-height: 1.6rem;
+}
+
+.info-container .cards-container .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .info-container .cards-container .card::before {

@@ -223,13 +223,9 @@
         text-align: start;
 
         margin: calc(5rem * var(--card)) 1rem 0;
-
+        
         span {
           left: 20px;
-        }
-
-        .card-text {
-          padding-right: 2.5rem;
         }
 
         &::before {
